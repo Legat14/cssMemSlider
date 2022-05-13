@@ -87,6 +87,10 @@ header {
   display: flex;
 }
 
+input {
+  display: none;
+}
+
 .slider-img {
   display: none;
   border-radius: 20px;
@@ -181,8 +185,10 @@ header {
 }
 
 .slider-control {
+  width: 900px;
   margin-top: 2vh;
   display: flex;
+  justify-content: space-between;
 }
 
 .buttons {
@@ -192,13 +198,82 @@ header {
 label {
   width: 50px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
-label div {
+label > div {
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #5c1a5c;
+  border: 4px solid #464646;
+  border-radius: 15px;
+}
+
+label:hover > div {
+  background-color: #225c1a;
+}
+
+label:active > div {
+  background-color: #1a475c;
+}
+
+#button-01:checked ~ .slider-control > .buttons > label > #radio-01 {
+  background-color: #d10000;
+}
+
+#button-02:checked ~ .slider-control > .buttons > label > #radio-02 {
+  background-color: #d10000;
+}
+
+#button-03:checked ~ .slider-control > .buttons > label > #radio-03 {
+  background-color: #d10000;
+}
+
+#button-04:checked ~ .slider-control > .buttons > label > #radio-04 {
+  background-color: #d10000;
+}
+
+#button-05:checked ~ .slider-control > .buttons > label > #radio-05 {
+  background-color: #d10000;
+}
+
+label > div > div {
+  width: 12px;
+  height: 12px;
+  display: none;
+  background-color: #3d3d3d;
+  border-radius: 6px;
+}
+
+#button-01:checked ~ .slider-control > .buttons > label > #radio-01 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-02:checked ~ .slider-control > .buttons > label > #radio-02 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-03:checked ~ .slider-control > .buttons > label > #radio-03 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-04:checked ~ .slider-control > .buttons > label > #radio-04 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-05:checked ~ .slider-control > .buttons > label > #radio-05 > div {
+  display: block;
+  background-color: #3d3d3d;
 }
 
 footer {
