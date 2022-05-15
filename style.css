@@ -380,3 +380,42 @@ footer {
   transform: scale(110%);
   transition: 0.4s;
 }
+
+@media (max-width: 920px) {
+  .slider {
+    width: 720px;
+    height: 480px;
+  }
+  .slider-img {
+    width: 720px;
+    height: 480px;
+  }
+  .slider-control {
+    width: 720px;
+  }
+  .footer_div {
+    width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    width: 600px;
+    height: 400px;
+  }
+  .slider-img {
+    width: 600px;
+    height: 400px;
+  }
+  .slider-control {
+    width: 600px;
+    flex-direction: column;
+  }
+  .inscriptions {
+    width: 100%;
+    order: 2;
+  }
+  .footer_div {
+    width: 600px;
+  }
+}
