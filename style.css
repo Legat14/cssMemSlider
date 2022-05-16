@@ -72,7 +72,7 @@ header {
   justify-content: center;
   align-items: center;
   font-family: 'Oleo Script Swash Caps', cursive;
-  background-color: #5c1a5c;
+  background-color: #e9f0d9;
 }
 
 .slider-area {
@@ -82,7 +82,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  background-color: #dfc284;
+  background-color: #fcffe8;
 }
 
 input {
@@ -90,12 +90,15 @@ input {
 }
 
 .slider {
+  width: 900px;
   height: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: inset 8px 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 .slider-img {
   display: none;
-  border-radius: 20px;
 }
 
 #button-01:checked ~ .slider > .img-01 {
@@ -203,9 +206,9 @@ input {
   flex-grow: 1;
   overflow: hidden;
   font-size: 25px;
-  color: #ffffff;
-  background-color: #5c1a5c;
+  color: #000000;
   border-radius: 35px;
+  box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .inscriptions > p {
@@ -270,37 +273,36 @@ label > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5c1a5c;
-  border: 4px solid #464646;
   border-radius: 15px;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 label:hover > div {
-  background-color: #225c1a;
+  background-color: #e9e780;
 }
 
 label:active > div {
-  background-color: #1a475c;
+  background-color: #dac150;
 }
 
 #button-01:checked ~ .slider-control > .buttons > label > #radio-01 {
-  background-color: #d10000;
+  background-color: #dbc0fa;
 }
 
 #button-02:checked ~ .slider-control > .buttons > label > #radio-02 {
-  background-color: #d10000;
+  background-color: #dbc0fa;
 }
 
 #button-03:checked ~ .slider-control > .buttons > label > #radio-03 {
-  background-color: #d10000;
+  background-color: #dbc0fa;
 }
 
 #button-04:checked ~ .slider-control > .buttons > label > #radio-04 {
-  background-color: #d10000;
+  background-color: #dbc0fa;
 }
 
 #button-05:checked ~ .slider-control > .buttons > label > #radio-05 {
-  background-color: #d10000;
+  background-color: #dbc0fa;
 }
 
 label > div > div {
@@ -343,8 +345,8 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: #ffffff;
-  background-color: #5c1a5c;
+  color: #000000;
+  background-color: #e9f0d9;
 }
 
 .footer_div {
@@ -368,12 +370,13 @@ footer {
 
 .developer_link:hover,
 .developer_link:visited:hover {
-  color: #ffe96d;
+  color: #ac9513;
   transform: scale(110%);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
 
 .developer_link:visited {
-  color: #ffffff;
+  color: #000000;
 }
 
 .rsschool_link:hover {
