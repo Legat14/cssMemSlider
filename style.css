@@ -59,10 +59,12 @@ select {
 }
 
 body {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
 }
 
 header {
@@ -92,12 +94,15 @@ input {
 .slider {
   width: 900px;
   height: 600px;
+  flex-shrink: 1;
   overflow: hidden;
   border-radius: 20px;
   box-shadow: inset 8px 8px 25px rgba(0, 0, 0, 0.6);
 }
 
 .slider-img {
+  width: 100%;
+  height: 100%;
   display: none;
 }
 
@@ -212,6 +217,7 @@ input {
 }
 
 .inscriptions > p {
+  margin: 0px 40px;
   display: none;
 }
 
@@ -386,39 +392,42 @@ footer {
 
 @media (max-width: 920px) {
   .slider {
-    width: 720px;
-    height: 480px;
+    width: 93vw;
+    height: 62vw;
   }
   .slider-img {
-    width: 720px;
-    height: 480px;
+    width: 93vw;
+    height: 62vw;
   }
   .slider-control {
-    width: 720px;
+    width: 93vw;
   }
   .footer_div {
-    width: 720px;
+    width: 93vw;
   }
 }
 
 @media (max-width: 768px) {
-  .slider {
-    width: 600px;
-    height: 400px;
-  }
-  .slider-img {
-    width: 600px;
-    height: 400px;
-  }
   .slider-control {
-    width: 600px;
     flex-direction: column;
   }
   .inscriptions {
     width: 100%;
     order: 2;
   }
-  .footer_div {
-    width: 600px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 540px) {
+  .inscriptions {
+    font-size: 18px;
+  }
+  footer {
+    font-size: 16px;
   }
 }
