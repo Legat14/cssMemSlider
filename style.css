@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  background-color: #e9f0d9;
+}
+
+.slider-area {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #fcffe8;
+}
+
+input {
+  display: none;
+}
+
+.slider {
+  width: 56.25rem;
+  height: 37.5rem;
+  flex-shrink: 1;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  box-shadow: inset 0.5rem 0.8rem 1.6rem rgba(0, 0, 0, 0.6);
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#button-01:checked ~ .slider > .img-01 {
+  display: block;
+  animation: 1s appearance-01;
+}
+
+#button-02:checked ~ .slider > .img-02 {
+  display: block;
+  animation: 1s appearance-02;
+}
+
+#button-03:checked ~ .slider > .img-03 {
+  display: block;
+  animation: 1s appearance-03;
+}
+
+#button-04:checked ~ .slider > .img-04 {
+  display: block;
+  animation: 1s appearance-04;
+}
+
+#button-05:checked ~ .slider > .img-05 {
+  display: block;
+  animation: 1s linear appearance-05;
+}
+
+@keyframes appearance-01 {
+  from {
+    margin-left: -125rem;
+    transform: rotate(-15deg);
+  }
+  to {
+    margin-left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes appearance-02 {
+  from {
+    transform: scale(0%);
+  }
+  80% {
+    transform: scale(121%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+
+@keyframes appearance-03 {
+  from {
+    transform: scale(70%, 0%);
+  }
+  to {
+    transform: scale(100%, 100%);
+  }
+}
+
+@keyframes appearance-04 {
+  from {
+    transform: rotate(-540deg) scale(0%);
+  }
+  80% {
+    transform: rotate(15deg) scale(100%);
+  }
+  to {
+    transform: rotate(0) scale(100%);
+  }
+}
+
+@keyframes appearance-05 {
+  from {
+    margin-top: -100rem;
+    transform: rotate(15deg);
+  }
+  90% {
+    margin-top: 0;
+    transform: rotate(0);
+  }
+  95% {
+    margin-top: -3.125rem;
+    transform: rotate(-10deg);
+  }
+  to {
+    margin-top: 0;
+    transform: rotate(0);
+  }
+}
+
+.slider-control {
+  width: 56.25rem;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.inscriptions {
+  height: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  font-size: 1.56rem;
+  color: #000000;
+  border-radius: 2.19rem;
+  box-shadow: inset 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.inscriptions > p {
+  margin: 0 2.5rem;
+  display: none;
+}
+
+#button-01:checked ~ .slider-control > .inscriptions > #text-01 {
+  display: block;
+  animation: 1s linear text-appearance;
+}
+
+#button-02:checked ~ .slider-control > .inscriptions > #text-02 {
+  display: block;
+  animation: 1s linear text-appearance;
+}
+
+#button-03:checked ~ .slider-control > .inscriptions > #text-03 {
+  display: block;
+  animation: 1s linear text-appearance;
+}
+
+#button-04:checked ~ .slider-control > .inscriptions > #text-04 {
+  display: block;
+  animation: 1s linear text-appearance;
+}
+
+#button-05:checked ~ .slider-control > .inscriptions > #text-05 {
+  display: block;
+  animation: 1s linear text-appearance;
+}
+
+@keyframes text-appearance {
+  from {
+    margin-bottom: -6.25rem;
+  }
+  70% {
+    margin-bottom: 1.25rem;
+  }
+  to {
+    margin-bottom: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  width: 3.125rem;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+label > div {
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.9375rem;
+  box-shadow: inset 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.6);
+}
+
+label:hover > div {
+  background-color: #e9e780;
+}
+
+label:active > div {
+  background-color: #dac150;
+}
+
+#button-01:checked ~ .slider-control > .buttons > label > #radio-01 {
+  background-color: #dbc0fa;
+}
+
+#button-02:checked ~ .slider-control > .buttons > label > #radio-02 {
+  background-color: #dbc0fa;
+}
+
+#button-03:checked ~ .slider-control > .buttons > label > #radio-03 {
+  background-color: #dbc0fa;
+}
+
+#button-04:checked ~ .slider-control > .buttons > label > #radio-04 {
+  background-color: #dbc0fa;
+}
+
+#button-05:checked ~ .slider-control > .buttons > label > #radio-05 {
+  background-color: #dbc0fa;
+}
+
+label > div > div {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: none;
+  background-color: #3d3d3d;
+  border-radius: 0.375rem;
+}
+
+#button-01:checked ~ .slider-control > .buttons > label > #radio-01 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-02:checked ~ .slider-control > .buttons > label > #radio-02 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-03:checked ~ .slider-control > .buttons > label > #radio-03 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-04:checked ~ .slider-control > .buttons > label > #radio-04 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+#button-05:checked ~ .slider-control > .buttons > label > #radio-05 > div {
+  display: block;
+  background-color: #3d3d3d;
+}
+
+footer {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #000000;
+  background-color: #e9f0d9;
+}
+
+.footer_div {
+  width: 56.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.developer {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.developer_link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.developer_link:hover,
+.developer_link:visited:hover {
+  color: #ac9513;
+  transform: scale(110%);
+  text-shadow: 1.875rem 1.875rem 1.875rem rgba(0, 0, 0, 0.6);
+}
+
+.developer_link:visited {
+  color: #000000;
+}
+
+.rsschool_link:hover {
+  transform: scale(110%);
+  transition: 0.4s;
+}
+
+@media (max-width: 920px) {
+  .slider {
+    width: 93vw;
+    height: 62vw;
+  }
+  .slider-img {
+    width: 93vw;
+    height: 62vw;
+  }
+  .slider-control {
+    width: 93vw;
+  }
+  .footer_div {
+    width: 93vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-control {
+    flex-direction: column;
+  }
+  .inscriptions {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .inscriptions {
+    font-size: 1.125rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}

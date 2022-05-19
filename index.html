@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Mem Slider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@700&family=Source+Code+Pro:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+  <header><h1>CSS mem slider</h1></header>
+  <div class="slider-area">
+    <input type="radio" id="button-01" name="controls" value="img-01" checked>
+    <input type="radio" id="button-02" name="controls" value="img-02">
+    <input type="radio" id="button-03" name="controls" value="img-03">
+    <input type="radio" id="button-04" name="controls" value="img-04">
+    <input type="radio" id="button-05" name="controls" value="img-05">
+    <div class="slider">
+      <img class="img-01 slider-img" src="./assets/img/Img-01.jpg" alt="img-01" width="900" height="600">
+      <img class="img-02 slider-img" src="./assets/img/Img-02.jpg" alt="img-02" width="900" height="600">
+      <img class="img-03 slider-img" src="./assets/img/Img-03.jpg" alt="img-03" width="900" height="600">
+      <img class="img-04 slider-img" src="./assets/img/Img-04.jpg" alt="img-04" width="900" height="600">
+      <img class="img-05 slider-img" src="./assets/img/Img-05.jpg" alt="img-05" width="900" height="600">
+    </div>
+    <div class="slider-control">
+      <div class="inscriptions">
+        <p id="text-01">Это Чмоня</p>
+        <p id="text-02">А это Чмоня поменьше</p>
+        <p id="text-03">А это я, когда сажусь на диету</p>
+        <p id="text-04">Это мой босс</p>
+        <p id="text-05">Ну, и какая подборка котомемов без рыбов?</p>
+      </div>
+      <div class="buttons">
+        <label for="button-01">
+          <div id="radio-01"><div></div></div>
+        </label>
+        <label for="button-02">
+          <div id="radio-02"><div></div></div>
+        </label>
+        <label for="button-03">
+          <div id="radio-03"><div></div></div>
+        </label>
+        <label for="button-04">
+          <div id="radio-04"><div></div></div>
+        </label>
+        <label for="button-05">
+          <div id="radio-05"><div></div></div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_div">
+      <p class="developer">Developed by: <a class="developer_link" href="https://github.com/Legat14" target="_blank">Ivan Zotov</a></p>
+      <p class="date">May 2022</p>
+      <a class="rsschool_link" href="https://rs.school/" target="_blank"><img src="./assets/img/rs_school_js_w.svg" alt="RS School" width="120"></a>
+    </div>
+  </footer>
+</body>
+</html>
